@@ -22,8 +22,7 @@ body {
   margin: 0;
   font-family: var(--font-main);
   color: var(--text);
-  background-color: rgb(255, 241, 241)
-    var(--bg-main);
+  background-color: var(--bg-main);
   min-height: 100vh;
 }
 
