@@ -1,0 +1,261 @@
+
+.headerCarrito {
+  background: linear-gradient(145deg, #ffffff 20%, #f5fbff 100%);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 28px;
+  margin-bottom: 26px;
+  box-shadow: var(--shadow-soft);
+}
+
+.headerCarrito h2 {
+  font-size: clamp(1.7rem, 1.35rem + 1vw, 2.45rem);
+  letter-spacing: -0.03em;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.filtros {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  background: var(--bg-soft);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.divider {
+  color: #adc5d4;
+  font-size: 20px;
+}
+
+.priceFilter,
+.category {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.priceFilter label,
+.category label {
+  color: var(--text-soft);
+  font-weight: 700;
+  font-size: 0.92rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.p-range {
+  display: inline-block;
+  margin-left: 4px;
+  color: var(--brand);
+  font-weight: 800;
+}
+
+.price-range {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.price-range span {
+  color: var(--text-soft);
+  font-size: 0.84rem;
+}
+
+#price {
+  accent-color: var(--brand);
+}
+
+.category select {
+  border: 1px solid #cfdbe7;
+  border-radius: 10px;
+  background: #fff;
+  padding: 9px 10px;
+  color: var(--text);
+  font-weight: 600;
+  min-width: 154px;
+}
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  padding-bottom: 30px;
+}
+
+.separate-bet {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 14px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--card);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  padding: 16px;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: revealCard 0.5s ease forwards;
+}
+
+.separate-bet:nth-child(2n) {
+  animation-delay: 0.06s;
+}
+
+.separate-bet:nth-child(3n) {
+  animation-delay: 0.12s;
+}
+
+.productCard {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: left;
+}
+
+.productImage {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: linear-gradient(180deg, #f6fbff 0%, #eff8ff 100%);
+  border: 1px solid #e5eef8;
+  padding: 8px;
+}
+
+.title {
+  font-size: 1.08rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.description {
+  color: var(--text-soft);
+  font-size: 0.9rem;
+  line-height: 1.35;
+  min-height: 2.6em;
+}
+
+.price {
+  color: var(--brand-strong);
+  font-size: 1.45rem;
+  font-weight: 800;
+}
+
+button {
+  border: 0;
+  font-family: inherit;
+}
+
+.buy-btn {
+  width: 100%;
+  background-color: black;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.buy-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 16px rgba(15, 118, 110, 0.22);
+}
+
+.footer {
+  margin-top: auto;
+  padding: 18px 12px 24px;
+  color: var(--text-soft);
+}
+
+.footer h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.footer h4 span {
+  color: var(--brand);
+  margin-left: 6px;
+}
+
+.footer h5 {
+  margin-top: 4px;
+  font-size: 0.83rem;
+  font-weight: 500;
+}
+
+@keyframes revealCard {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .grid-productos {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .headerCarrito {
+    padding: 18px;
+  }
+
+  .filtros {
+    justify-content: flex-start;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .priceFilter,
+  .category {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .grid-productos {
+    grid-template-columns: 1fr;
+  }
+}
+  
+
+.category{
+  display: flex;
+  gap: 8px;
+}
+
+
+.footer {
+  position: fixed;
+  left: 16px;
+  bottom: 16px;
+  text-align: left;
+  background: rgba(0, 0, 0, .7);
+  padding: 8px 24px;
+  border-radius: 32px;
+  opacity: .95;
+  backdrop-filter: blur(8px);
+}
+
+.footer span {
+  font-size: 14px;
+  color: #09f;
+  opacity: .8;
+}
+
+.footer h4,
+.footer h5 {
+  margin: 0;
+  display: flex;
+}
