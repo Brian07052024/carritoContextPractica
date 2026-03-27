@@ -5,13 +5,11 @@ import { useProducts } from './hooks/useProducts';
 import Header from './components/Header';
 import { Footer } from './components/Footer';
 import Cart from './components/Cart';
-import { useCart } from './hooks/useCart';
 
 function App() {
 
   const [isCartOpen, setIsCartOpen] = useState(false);
   const { products, loading} = useProducts();
-  const {cart} = useCart()
   
   return (
     <>

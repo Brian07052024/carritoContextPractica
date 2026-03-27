@@ -1,7 +1,17 @@
+import { useCart } from "../hooks/useCart";
+
 function RenderProducts({ productsArray }) {
+
+    const { cart, addToCart } = useCart()
+
+    function handleClick(product) {
+        addToCart(product)
+    }
+
+
     return (
         productsArray.map((product) => {
-            
+
 
             return (
                 <div key={product.id} className='separate-bet'>
@@ -16,7 +26,12 @@ function RenderProducts({ productsArray }) {
                         <p className='price'>${product.price}</p>
                     </div>
 
-                    <button className='buy-btn'>Agregar al carrito</button>
+                    <button className='buy-btn' onClick={() => handleClick(product)}>
+                        {
+                            cart.some((item) => item.id === product.id) ? "Ya esta en carrito" : "Agregar al carrito"
+                        }
+
+                    </button>
                 </div>
             )
 

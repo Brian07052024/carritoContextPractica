@@ -7,11 +7,13 @@ import { FiltersProvider } from './contexts/filters.jsx'
 import { CartProvider } from './contexts/cart.jsx'
 
 createRoot(document.getElementById('root')).render(
-  <CartProvider>
-    <FiltersProvider>
+
+  <FiltersProvider>
+    <CartProvider>
       <App />
-    </FiltersProvider>
-  </CartProvider>
+
+    </CartProvider>
+  </FiltersProvider>
 
 
 

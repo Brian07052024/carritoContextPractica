@@ -26,5 +26,5 @@ export const useProducts = () => {
 
     const products = useMemo(() => filterProducts(allProducts), [allProducts, filterProducts]);
 
-    return { products, loading, error };
+    return { products, loading, error, allProducts };
 };
