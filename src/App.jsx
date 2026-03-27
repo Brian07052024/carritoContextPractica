@@ -1,6 +1,6 @@
 import './App.css'
 import { useState } from 'react';
-import RenderProducts from './components/renderProducts';
+import RenderProducts from './components/RenderProducts';
 import { useProducts } from './hooks/useProducts';
 import Header from './components/Header';
 import { Footer } from './components/Footer';

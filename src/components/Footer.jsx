@@ -5,7 +5,7 @@ export function Footer () {
       <h4>Prueba técnica de React ⚛️
         <span>shopCart</span>
       </h4>
-      <h5>Shopping Cart con useContext & useReducer</h5>
+      <h5>Shopping Cart con useContext</h5>
     </footer>
   )
 }
